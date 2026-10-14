@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNN Financial Services (Pty) Ltd | Your Trusted Accounting Partner</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#072415',      /* Deepest Forest Green */
+                            primary: '#0F3822',   /* Primary Forest Green */
+                            medium: '#1B4D3E',    /* Medium Forest */
+                            accent: '#22C55E',    /* Emerald Green */
+                            sage: '#E8F5E9',      /* Soft Mint/Sage tint */
+                            light: '#F2F9F5',     /* Light Background tint */
+                            gold: '#D4AF37'       /* Accent Gold */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-pattern {
+            background-color: #072415;
+            background-image: radial-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F2F9F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0F3822;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-dark text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-brand-medium/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 text-center sm:text-left flex-wrap">
+                <span><i class="fa-solid fa-building me-1.5 text-brand-accent"></i> Reg: 2024 / 479205 / 07</span>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-location-dot me-1.5 text-brand-accent"></i> East London &amp; Komani, Eastern Cape</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-3 text-brand-accent mr-2">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <span class="text-slate-600">|</span>
+                <a href="tel:0644145304" class="hover:text-brand-accent transition"><i class="fa-solid fa-phone me-1 text-brand-accent"></i> 064 414 5304</a>
+                <span>/</span>
+                <a href="tel:0815125143" class="hover:text-brand-accent transition">081 512 5143</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <img src="img/logo.png" alt="BNN Financial Services Logo" class="h-10 w-auto object-contain">
+                </div>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-700">
+                    <a href="#home" class="hover:text-brand-primary transition py-1 border-b-2 border-transparent hover:border-brand-accent">Home</a>
+                    <a href="#about" class="hover:text-brand-primary transition py-1 border-b-2 border-transparent hover:border-brand-accent">About &amp; Team</a>
+                    <a href="#services" class="hover:text-brand-primary transition py-1 border-b-2 border-transparent hover:border-brand-accent">Services</a>
+                    <a href="#calculator" class="hover:text-brand-primary transition py-1 border-b-2 border-transparent hover:border-brand-accent">Fee Calculator</a>
+                    <a href="#why-us" class="hover:text-brand-primary transition py-1 border-b-2 border-transparent hover:border-brand-accent">Why Choose Us</a>
+                    <a href="#contact" class="hover:text-brand-primary transition py-1 border-b-2 border-transparent hover:border-brand-accent">Contact</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="#contact" class="bg-brand-primary hover:bg-brand-medium text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-brand-primary/25 hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <span>Book Consultation</span>
+                        <i class="fa-solid fa-arrow-right text-xs text-brand-accent"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-brand-sage hover:text-brand-primary">Home</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-brand-sage hover:text-brand-primary">About &amp; Team</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-brand-sage hover:text-brand-primary">Services</a>
+            <a href="#calculator" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-brand-sage hover:text-brand-primary">Fee Calculator</a>
+            <a href="#why-us" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-brand-sage hover:text-brand-primary">Why Choose Us</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-brand-sage hover:text-brand-primary">Contact Us</a>
+            <div class="pt-2">
+                <a href="#contact" class="w-full text-center block bg-brand-primary text-white py-3 rounded-xl font-semibold shadow">Book Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative hero-pattern text-white pt-12 pb-20 lg:pt-20 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brand-medium/60 backdrop-blur-md border border-brand-accent/30 text-emerald-300 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                        Tax Practitioners &amp; SAIPA Members
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif tracking-tight leading-tight">
+                        Your Trusted <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-emerald-100 to-white">Accounting Partner</span> <br>
+                        in South Africa
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Precision bookkeeping, SARS tax compliance, annual financial statements, and strategic business advisory directed by experienced shareholder leadership.
+                    </p>
+
+                    <!-- CTA Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="w-full sm:w-auto bg-brand-accent hover:bg-emerald-600 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg shadow-emerald-500/20 transition transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2">
+                            <span>Request Consultation</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#services" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-8 py-4 rounded-xl backdrop-blur-md transition text-center">
+                            Explore Services
+                        </a>
+                    </div>
+
+                    <!-- Quick Highlights Pill Grid -->
+                    <div class="pt-8 border-t border-white/10 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brand-accent font-serif">SAIPA</p>
+                            <p class="text-xs text-slate-400 mt-1">Professional Members</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-white font-serif">CIPC</p>
+                            <p class="text-xs text-slate-400 mt-1">Reg: 2024/479205/07</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-brand-accent font-serif">Fast</p>
+                            <p class="text-xs text-slate-400 mt-1">Direct Advisory</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Floating Card Right -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-accent to-emerald-800 rounded-3xl blur-xl opacity-30"></div>
+                        
+                        <div class="relative bg-brand-primary/90 border border-emerald-500/30 rounded-3xl p-6 sm:p-8 backdrop-blur-xl shadow-2xl text-slate-100 space-y-6">
+                            <div class="flex items-center justify-between pb-4 border-b border-emerald-800/60">
+                                <div>
+                                    <h2 class="text-lg font-bold text-white">Quick Service Inquiry</h2>
+                                    <p class="text-xs text-emerald-300">Get a tailored response within 24 hours</p>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                                    <i class="fa-solid fa-calculator text-lg"></i>
+                                </div>
+                            </div>
+
+                            <form id="hero-quick-form" class="space-y-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Company / Your Name</label>
+                                    <input type="text" required placeholder="John Doe" class="w-full bg-brand-dark/80 border border-emerald-800/80 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-accent transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Phone / WhatsApp</label>
+                                    <input type="tel" required placeholder="064 414 5304" class="w-full bg-brand-dark/80 border border-emerald-800/80 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-accent transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Primary Financial Need</label>
+                                    <select class="w-full bg-brand-dark/80 border border-emerald-800/80 rounded-lg px-3.5 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-brand-accent transition">
+                                        <option>Payroll Tax &amp; Submissions</option>
+                                        <option>Monthly Bookkeeping</option>
+                                        <option>Annual Financial Statements</option>
+                                        <option>Independent Review</option>
+                                        <option>Management Accounts</option>
+                                        <option>Business Advisory</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="w-full bg-brand-accent hover:bg-emerald-500 text-slate-950 font-bold py-3 rounded-lg shadow-md transition flex items-center justify-center gap-2">
+                                    <span>Submit Express Inquiry</span>
+                                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us & Leadership Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                
+                <!-- About Description -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100/60 px-3 py-1 rounded-md">
+                        About Our Firm
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 leading-tight">
+                        Finance Expertise You Can Depend On Every Day
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed font-normal">
+                        At <strong class="text-brand-primary">BNN FINANCIAL SERVICES (PTY) LTD</strong>, we believe that clarity in numbers drives confidence in decision-making. Incorporated on 01/08/2024, our firm is anchored by experienced leadership committed to top-tier financial management and tax compliance.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Operating out of our offices in East London and registered offices in Ezibeleni, Komani, we bridge the gap between regulatory accounting obligations and meaningful strategic business growth.
+                    </p>
+
+                    <div class="flex gap-4 pt-2">
+                        <div class="flex items-center gap-2 text-sm font-bold text-brand-primary">
+                            <i class="fa-solid fa-circle-check text-brand-accent"></i> Tax Practitioners
+                        </div>
+                        <div class="flex items-center gap-2 text-sm font-bold text-brand-primary">
+                            <i class="fa-solid fa-circle-check text-brand-accent"></i> SAIPA Members
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Firm Quick Facts -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-brand-light p-8 border border-brand-sage shadow-xl space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-primary text-brand-accent flex items-center justify-center text-2xl shadow-md">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900 text-lg">BNN Financial Services</h3>
+                                <p class="text-xs text-slate-500">Reg: 2024 / 479205 / 07</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Private company offering unrestricted business activities with specialized focus on bookkeeping, taxation, and annual financial statements.
+                        </p>
+                        <div class="pt-2 border-t border-brand-sage flex justify-between text-xs text-slate-500">
+                            <span>Financial Year-End: February</span>
+                            <span class="font-bold text-brand-primary">In Business</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Directors & Shareholders Section -->
+            <div class="pt-10 border-t border-slate-200">
+                <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3.5 py-1 rounded-full">Leadership &amp; Ownership</span>
+                    <h3 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">Directors &amp; Shareholders</h3>
+                    <p class="text-slate-600 text-sm">Meet the accredited professionals directing BNN Financial Services.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    
+                    <!-- Director 1 -->
+                    <div class="bg-brand-light rounded-3xl p-8 border border-brand-sage shadow-sm hover:shadow-md transition space-y-6 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-16 h-16 rounded-2xl bg-brand-primary text-brand-accent flex items-center justify-center text-2xl font-bold shadow-md">
+                                SN
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900">Sammorah-Bathembu Ngqoleka</h4>
+                                <p class="text-xs font-semibold text-emerald-700 mt-1 uppercase tracking-wider">Tax Practitioner &amp; SAIPA Member</p>
+                                <p class="text-xs text-slate-500 mt-0.5">Director &amp; Shareholder</p>
+                            </div>
+                            <div class="space-y-2 pt-2 text-sm text-slate-700">
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-primary"></i> <a href="mailto:sammorah@bnnfinancialservices.co.za" class="hover:underline font-medium text-xs break-all">sammorah@bnnfinancialservices.co.za</a></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-primary"></i> <a href="tel:+27815125143" class="hover:underline font-medium text-xs">+27 81 512 5143</a></p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-brand-sage flex items-center justify-between">
+                            <span class="text-xs text-slate-500">Verified Credentials</span>
+                            <div class="flex gap-2 text-brand-primary">
+                                <a href="https://linkedin.com" target="_blank" class="w-8 h-8 rounded-lg bg-white flex items-center justify-center hover:bg-brand-primary hover:text-white transition shadow-sm"><i class="fa-brands fa-linkedin text-xs"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Director 2 -->
+                    <div class="bg-brand-light rounded-3xl p-8 border border-brand-sage shadow-sm hover:shadow-md transition space-y-6 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-16 h-16 rounded-2xl bg-brand-primary text-brand-accent flex items-center justify-center text-2xl font-bold shadow-md">
+                                BN
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-slate-900">Bandile Julius Nodwele</h4>
+                                <p class="text-xs font-semibold text-emerald-700 mt-1 uppercase tracking-wider">Director &amp; Shareholder</p>
+                                <p class="text-xs text-slate-500 mt-0.5">Business &amp; Operations Executive</p>
+                            </div>
+                            <div class="space-y-2 pt-2 text-sm text-slate-700">
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-primary"></i> <a href="mailto:bjnodwele@bnnfinancialservices.co.za" class="hover:underline font-medium text-xs break-all">bjnodwele@bnnfinancialservices.co.za</a></p>
+                                <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-primary"></i> <a href="tel:0644145304" class="hover:underline font-medium text-xs">064 414 5304</a></p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-brand-sage flex items-center justify-between">
+                            <span class="text-xs text-slate-500">Verified Credentials</span>
+                            <div class="flex gap-2 text-brand-primary">
+                                <a href="https://linkedin.com" target="_blank" class="w-8 h-8 rounded-lg bg-white flex items-center justify-center hover:bg-brand-primary hover:text-white transition shadow-sm"><i class="fa-brands fa-linkedin text-xs"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3.5 py-1 rounded-full">Our Core Offerings</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">Comprehensive Financial Services</h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Tailored, high-value financial solutions crafted to meet the strict demands of South African business operations and regulatory bodies.
+                </p>
+            </div>
+
+            <!-- 6 Key Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: Payroll tax -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-sage group-hover:bg-brand-primary text-brand-primary group-hover:text-brand-accent flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                            <i class="fa-solid fa-receipt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Payroll Tax</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Seamless PAYE, UIF, and SDL calculations and SARS submission management, ensuring full statutory compliance and hassle-free employee payments.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> PAYE &amp; UIF Returns (EMP201)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Bi-annual Reconciliations (EMP501)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> IRP5 / IT3(a) Certificate Generation</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="text-brand-primary font-bold text-sm inline-flex items-center gap-2 group-hover:text-brand-accent transition">
+                        <span>Get Started</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2: Bookkeeping -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-sage group-hover:bg-brand-primary text-brand-primary group-hover:text-brand-accent flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Bookkeeping</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Systematic processing of income, expenses, invoices, and bank reconciliations to keep your day-to-day accounts accurate and organized.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Bank &amp; Ledger Reconciliation</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Accounts Receivable &amp; Payable</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> VAT201 Calculations &amp; Filing</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="text-brand-primary font-bold text-sm inline-flex items-center gap-2 group-hover:text-brand-accent transition">
+                        <span>Get Started</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3: Annual Financial Statements -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-sage group-hover:bg-brand-primary text-brand-primary group-hover:text-brand-accent flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Annual Financial Statements</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Preparation of compliant year-end financial statements in accordance with IFRS for SMEs and South African Companies Act standards.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Balance Sheets &amp; Income Statements</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Annual CIPC Return Support</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Year-End Tax Submissions</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="text-brand-primary font-bold text-sm inline-flex items-center gap-2 group-hover:text-brand-accent transition">
+                        <span>Get Started</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4: Independent Reviews -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-sage group-hover:bg-brand-primary text-brand-primary group-hover:text-brand-accent flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Independent Reviews</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Objective assurance reviews tailored for businesses required by law to submit independently verified financial statements without full audit overheads.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Public Interest Score Assessment</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Statutory Compliance Assurance</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Financial Credibility Enhancement</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="text-brand-primary font-bold text-sm inline-flex items-center gap-2 group-hover:text-brand-accent transition">
+                        <span>Get Started</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5: Management Accounts -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-sage group-hover:bg-brand-primary text-brand-primary group-hover:text-brand-accent flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Management Accounts</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Monthly or quarterly operational accounting reports designed to help business directors track performance, cash flow, and key budgets.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Cash Flow &amp; Profit Analysis</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Variance &amp; Budget Reporting</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Lender &amp; Investor Readiness</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="text-brand-primary font-bold text-sm inline-flex items-center gap-2 group-hover:text-brand-accent transition">
+                        <span>Get Started</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6: Business Advisory -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-sage group-hover:bg-brand-primary text-brand-primary group-hover:text-brand-accent flex items-center justify-center text-2xl mb-6 transition-colors duration-300">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Business Advisory</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Strategic growth planning, financial restructuring, risk management, and tax planning guidance to scale your business sustainably.
+                        </p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Growth &amp; Cost Optimization</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Tax Efficiency Planning</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Corporate Governance Guidance</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="text-brand-primary font-bold text-sm inline-flex items-center gap-2 group-hover:text-brand-accent transition">
+                        <span>Get Started</span> <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Fee Estimator Widget -->
+    <section id="calculator" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-primary text-white rounded-3xl p-6 sm:p-12 shadow-2xl overflow-hidden relative">
+                <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-brand-accent/10 rounded-full blur-2xl"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+                    
+                    <div class="lg:col-span-6 space-y-6">
+                        <span class="inline-block text-xs font-bold uppercase tracking-wider text-brand-accent bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800">Interactive Estimator</span>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Estimate Your Monthly Accounting Package</h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Select the specific financial services your enterprise needs to get an instant estimated monthly retainer baseline.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center font-bold text-sm">1</div>
+                                <p class="text-sm text-slate-200">Toggle required services based on current volume</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center font-bold text-sm">2</div>
+                                <p class="text-sm text-slate-200">Adjust estimated employee headcount</p>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center font-bold text-sm">3</div>
+                                <p class="text-sm text-slate-200">Submit your customized breakdown directly to our team</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Card Controls -->
+                    <div class="lg:col-span-6 bg-brand-dark/90 p-6 sm:p-8 rounded-2xl border border-emerald-800/80 space-y-6">
+                        
+                        <div class="space-y-3">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300">1. Select Required Services</label>
+                            
+                            <div class="space-y-2">
+                                <label class="flex items-center justify-between p-3 rounded-lg bg-brand-primary/50 hover:bg-brand-primary cursor-pointer border border-emerald-900 transition">
+                                    <span class="text-sm text-slate-200"><i class="fa-solid fa-book me-2 text-brand-accent"></i> Monthly Bookkeeping &amp; Reconciliations</span>
+                                    <input type="checkbox" id="calc-bookkeeping" value="1200" class="calc-trigger w-4 h-4 text-brand-accent rounded focus:ring-0">
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 rounded-lg bg-brand-primary/50 hover:bg-brand-primary cursor-pointer border border-emerald-900 transition">
+                                    <span class="text-sm text-slate-200"><i class="fa-solid fa-users me-2 text-brand-accent"></i> Payroll Tax &amp; Submissions (EMP201/501)</span>
+                                    <input type="checkbox" id="calc-payroll" value="800" class="calc-trigger w-4 h-4 text-brand-accent rounded focus:ring-0">
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 rounded-lg bg-brand-primary/50 hover:bg-brand-primary cursor-pointer border border-emerald-900 transition">
+                                    <span class="text-sm text-slate-200"><i class="fa-solid fa-chart-line me-2 text-brand-accent"></i> Management Accounts &amp; Independent Reviews</span>
+                                    <input type="checkbox" id="calc-mgmt" value="1500" class="calc-trigger w-4 h-4 text-brand-accent rounded focus:ring-0">
+                                </label>
+
+                                <label class="flex items-center justify-between p-3 rounded-lg bg-brand-primary/50 hover:bg-brand-primary cursor-pointer border border-emerald-900 transition">
+                                    <span class="text-sm text-slate-200"><i class="fa-solid fa-lightbulb me-2 text-brand-accent"></i> Strategic Business Advisory</span>
+                                    <input type="checkbox" id="calc-advisory" value="1000" class="calc-trigger w-4 h-4 text-brand-accent rounded focus:ring-0">
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Staff Slider -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs text-slate-300">
+                                <span>Employee Count (Payroll Factor)</span>
+                                <span id="employee-count-label" class="font-bold text-brand-accent">5 Employees</span>
+                            </div>
+                            <input type="range" id="calc-employees" min="1" max="50" value="5" class="w-full accent-brand-accent">
+                        </div>
+
+                        <!-- Price Result Display -->
+                        <div class="pt-4 border-t border-emerald-800/80 flex items-center justify-between">
+                            <div>
+                                <p class="text-xs text-slate-400">Estimated Starting Retainer</p>
+                                <p class="text-3xl font-extrabold text-white font-serif">R <span id="calc-total">0</span> <span class="text-xs text-slate-400 font-sans font-normal">/ month</span></p>
+                            </div>
+                            <a href="#contact" id="lock-quote-btn" class="bg-brand-accent hover:bg-emerald-500 text-slate-950 px-5 py-2.5 rounded-xl text-xs font-bold transition">
+                                Request Formal Quote
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-accent bg-emerald-950 px-3.5 py-1 rounded-full border border-emerald-800">Our Value Proposition</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold">We Go Beyond The Numbers</h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Combining SAIPA certified technical accuracy with proactive corporate advisory to safeguard your business status and promote financial efficiency.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="p-6 bg-slate-800/80 rounded-2xl border border-slate-700 hover:border-brand-accent transition space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-900/50 text-brand-accent flex items-center justify-center text-xl font-bold">01</div>
+                    <h3 class="text-lg font-bold text-white">Full Regulatory Peace of Mind</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Never miss a SARS deadline or tax clearance deadline. We keep your business fully compliant year-round.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-slate-800/80 rounded-2xl border border-slate-700 hover:border-brand-accent transition space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-900/50 text-brand-accent flex items-center justify-center text-xl font-bold">02</div>
+                    <h3 class="text-lg font-bold text-white">Tailored SME Packages</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Flexible service models that grow alongside your business—no bloated corporate overhead fees.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-slate-800/80 rounded-2xl border border-slate-700 hover:border-brand-accent transition space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-900/50 text-brand-accent flex items-center justify-center text-xl font-bold">03</div>
+                    <h3 class="text-lg font-bold text-white">Actionable Insights</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Clear, understandable management reports that show you where money is going and how to optimize margins.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-slate-800/80 rounded-2xl border border-slate-700 hover:border-brand-accent transition space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-900/50 text-brand-accent flex items-center justify-center text-xl font-bold">04</div>
+                    <h3 class="text-lg font-bold text-white">Dedicated Support</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Direct communication channels via phone, email, and in-person consultations with our directors.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Contact & Location Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3.5 py-1 rounded-full">Contact Details</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">Let's Talk About Your Business Needs</h2>
+                <p class="text-slate-600 text-sm">
+                    Reach out directly or send us an inquiry below to discuss your accounting, tax, or financial advisory requirements.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details Cards Left -->
+                <div class="lg:col-span-5 space-y-6">
+                    
+                    <!-- Direct Phone Card -->
+                    <div class="p-6 bg-brand-light rounded-2xl border border-brand-sage flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-primary text-brand-accent flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-base">Phone Numbers</h4>
+                            <p class="text-xs text-slate-500 mb-2">Direct line to directors</p>
+                            <div class="space-y-1 text-sm font-semibold text-brand-primary">
+                                <a href="tel:0644145304" class="block hover:underline"><i class="fa-solid fa-mobile-screen me-2 text-brand-accent"></i> 064 414 5304 (Bandile)</a>
+                                <a href="tel:0815125143" class="block hover:underline"><i class="fa-solid fa-mobile-screen me-2 text-brand-accent"></i> +27 81 512 5143 (Sammorah)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Email Card -->
+                    <div class="p-6 bg-brand-light rounded-2xl border border-brand-sage flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-primary text-brand-accent flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-slate-900 text-base">Email Addresses</h4>
+                            <div class="space-y-1 text-xs font-semibold text-brand-primary">
+                                <a href="mailto:Info@bnnfinancialservices.co.za" class="block hover:underline break-all"><i class="fa-solid fa-at me-1"></i> Info@bnnfinancialservices.co.za</a>
+                                <a href="mailto:sammorah@bnnfinancialservices.co.za" class="block hover:underline break-all"><i class="fa-solid fa-at me-1"></i> sammorah@bnnfinancialservices.co.za</a>
+                                <a href="mailto:bjnodwele@bnnfinancialservices.co.za" class="block hover:underline break-all"><i class="fa-solid fa-at me-1"></i> bjnodwele@bnnfinancialservices.co.za</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Office Address Card -->
+                    <div class="p-6 bg-brand-light rounded-2xl border border-brand-sage flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-primary text-brand-accent flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Office Address (East London)</h4>
+                                <p class="text-sm text-slate-700 mt-1">75 Garcia street, Cambridge, East London 5247</p>
+                            </div>
+                            <div class="pt-2 border-t border-brand-sage">
+                                <h5 class="font-bold text-slate-900 text-xs uppercase tracking-wider text-slate-500">Registered Address</h5>
+                                <p class="text-xs text-slate-600 mt-1">381 Usindiso Street Zone 2, Ezibeleni, Komani, Eastern Cape 5320</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Detailed Contact Form Right -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
+                        <h3 class="text-xl font-bold text-slate-900 border-b pb-4">Schedule a Consultation</h3>
+                        
+                        <form id="main-contact-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
+                                    <input type="text" required placeholder="e.g. Siyabonga Dlamini" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Email Address *</label>
+                                    <input type="email" required placeholder="name@company.co.za" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent transition">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
+                                    <input type="tel" required placeholder="081 512 5143" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Service Required</label>
+                                    <select class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent transition">
+                                        <option>Payroll Tax</option>
+                                        <option>Bookkeeping</option>
+                                        <option>Annual Financial Statements</option>
+                                        <option>Independent Reviews</option>
+                                        <option>Management Accounts</option>
+                                        <option>Business Advisory</option>
+                                        <option>Full Monthly Package</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">How Can We Help Your Business? *</label>
+                                <textarea rows="4" required placeholder="Provide brief details about your accounting status, company size, or tax needs..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent transition"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-primary hover:bg-brand-medium text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-primary/20 transition flex items-center justify-center gap-2 text-base">
+                                <span>Send Consultation Request</span>
+                                <i class="fa-solid fa-paper-plane text-sm text-brand-accent"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-slate-400 pt-16 pb-8 border-t border-brand-medium/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+                
+                <!-- Footer Info -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-brand-primary flex items-center justify-center text-brand-accent font-bold">
+                            BNN
+                        </div>
+                        <span class="text-xl font-extrabold text-white font-serif">BNN FINANCIAL SERVICES</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Registered Private Company offering professional financial services, bookkeeping, payroll tax management, independent reviews, and business advisory across South Africa.
+                    </p>
+                    <div class="text-xs text-slate-400 space-y-1 pt-2">
+                        <p><strong class="text-slate-300">Registration Number:</strong> 2024 / 479205 / 07</p>
+                        <p><strong class="text-slate-300">Entity Type:</strong> Private Company (In Business)</p>
+                    </div>
+                    <!-- Social Media Links -->
+                    <div class="flex items-center gap-3 pt-2 text-brand-accent">
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-slate-950 transition"><i class="fa-brands fa-linkedin text-sm"></i></a>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-slate-950 transition"><i class="fa-brands fa-facebook text-sm"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-9 h-9 rounded-lg bg-brand-primary flex items-center justify-center hover:bg-brand-accent hover:text-slate-950 transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Footer Services Quick Links -->
+                <div class="lg:col-span-3 space-y-3">
+                    <p class="text-sm font-bold text-white uppercase tracking-wider">Services</p>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="hover:text-brand-accent transition">Payroll Tax Services</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition">Bookkeeping &amp; Reconciliations</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition">Annual Financial Statements</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition">Independent Reviews</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition">Management Accounts</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition">Business Advisory</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Contact Quick View -->
+                <div class="lg:col-span-4 space-y-3">
+                    <p class="text-sm font-bold text-white uppercase tracking-wider">East London Office</p>
+                    <p class="text-xs text-slate-400">75 Garcia street, Cambridge, East London 5247</p>
+                    <div class="pt-2 text-xs space-y-1">
+                        <p class="text-slate-300 font-semibold"><i class="fa-solid fa-envelope text-brand-accent me-1.5"></i> Info@bnnfinancialservices.co.za</p>
+                        <p class="text-slate-300 font-semibold"><i class="fa-solid fa-envelope text-brand-accent me-1.5"></i> sammorah@bnnfinancialservices.co.za</p>
+                        <p class="text-slate-300 font-semibold"><i class="fa-solid fa-envelope text-brand-accent me-1.5"></i> bjnodwele@bnnfinancialservices.co.za</p>
+                        <p class="text-slate-300 font-semibold pt-1"><i class="fa-solid fa-phone text-brand-accent me-1.5"></i> 064 414 5304 / 081 512 5143</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <p>&copy; <span id="year"></span> BNN FINANCIAL SERVICES (PTY) LTD. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#home" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#home" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 max-w-md bg-brand-primary text-white p-4 rounded-xl shadow-2xl border border-brand-accent flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-brand-accent text-slate-950 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="text-xs">
+            <p class="font-bold text-white text-sm" id="toast-title">Success!</p>
+            <p class="text-slate-200" id="toast-message">Your request has been recorded. We will contact you shortly.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Mobile Navigation Menu Toggle
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.className = 'fa-solid fa-bars text-xl';
+                } else {
+                    menuIcon.className = 'fa-solid fa-xmark text-xl';
+                }
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.className = 'fa-solid fa-bars text-xl';
+                });
+            });
+
+            // Fee Calculator Logic
+            const calcBookkeeping = document.getElementById('calc-bookkeeping');
+            const calcPayroll = document.getElementById('calc-payroll');
+            const calcMgmt = document.getElementById('calc-mgmt');
+            const calcAdvisory = document.getElementById('calc-advisory');
+            const calcEmployees = document.getElementById('calc-employees');
+            const employeeLabel = document.getElementById('employee-count-label');
+            const calcTotal = document.getElementById('calc-total');
+
+            function calculateFee() {
+                let baseFee = 0;
+                if (calcBookkeeping.checked) baseFee += parseFloat(calcBookkeeping.value);
+                if (calcPayroll.checked) baseFee += parseFloat(calcPayroll.value);
+                if (calcMgmt.checked) baseFee += parseFloat(calcMgmt.value);
+                if (calcAdvisory.checked) baseFee += parseFloat(calcAdvisory.value);
+
+                const empCount = parseInt(calcEmployees.value);
+                employeeLabel.textContent = empCount + (empCount === 1 ? ' Employee' : ' Employees');
+
+                let employeeMultiplier = 0;
+                if (calcPayroll.checked) {
+                    employeeMultiplier = (empCount - 1) * 45;
+                }
+
+                let total = baseFee > 0 ? (baseFee + employeeMultiplier) : 0;
+                calcTotal.textContent = total.toLocaleString();
+            }
+
+            document.querySelectorAll('.calc-trigger').forEach(el => {
+                el.addEventListener('change', calculateFee);
+            });
+            calcEmployees.addEventListener('input', calculateFee);
+
+            // Toast Display Helper Function
+            function showToast(title, message) {
+                const toast = document.getElementById('toast');
+                document.getElementById('toast-title').textContent = title;
+                document.getElementById('toast-message').textContent = message;
+
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+
+                setTimeout(() => {
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 4000);
+            }
+
+            document.getElementById('hero-quick-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                showToast('Inquiry Received!', 'Thank you. Our business consultant will phone you back shortly.');
+                this.reset();
+            });
+
+            document.getElementById('main-contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                showToast('Consultation Scheduled!', 'Your details have been submitted. We will email your confirmation shortly.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
