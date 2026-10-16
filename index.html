@@ -1,63 +1,261 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BNN Financial Services (Pty) Ltd | Your Trusted Accounting Partner</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            dark: '#072415',      /* Deepest Forest Green */
-                            primary: '#0F3822',   /* Primary Forest Green */
-                            medium: '#1B4D3E',    /* Medium Forest */
-                            accent: '#22C55E',    /* Emerald Green */
-                            sage: '#E8F5E9',      /* Soft Mint/Sage tint */
-                            light: '#F2F9F5',     /* Light Background tint */
-                            gold: '#D4AF37'       /* Accent Gold */
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif'],
-                    }
-                }
+  <!-- Primary SEO Meta Tags -->
+  <title>BNN Financial Services | SAIPA Accountants & Tax Practitioners | East London, Komani & Gqeberha</title>
+  <meta name="title" content="BNN Financial Services | SAIPA Accountants & Tax Practitioners | East London, Komani & Gqeberha">
+  <meta name="description" content="Registered SAIPA tax practitioners offering bookkeeping, SARS tax compliance, EMP201/501 payroll tax, annual financial statements, independent reviews, and business advisory across East London, Komani, Gqeberha, and South Africa. Call 064 414 5304.">
+  <meta name="keywords" content="BNN Financial Services, accountants East London, accountants Komani, accountants Gqeberha, accountants Port Elizabeth, SAIPA members Eastern Cape, tax practitioners South Africa, bookkeeping East London, bookkeeping Komani, SARS tax compliance, annual financial statements, independent review, EMP201 submission, EMP501 reconciliation, VAT201 calculations, management accounts, business advisory, Ezibeleni accountants, Cambridge East London accountants">
+  <meta name="author" content="BNN FINANCIAL SERVICES (PTY) LTD">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://bnnfinancialservices.co.za/">
+
+  <!-- Regional & Geographical Meta Tags (Local SEO Signals) -->
+  <meta name="geo.region" content="ZA-EC">
+  <meta name="geo.placename" content="East London, Komani, Gqeberha, Eastern Cape, South Africa">
+  <meta name="geo.position" content="-33.0153;27.9116">
+  <meta name="ICBM" content="-33.0153, 27.9116">
+  <meta name="coverage" content="South Africa, Eastern Cape, East London, Komani, Gqeberha, Port Elizabeth, Buffalo City, Enoch Mgijima, Nelson Mandela Bay">
+  <meta name="target" content="all">
+
+  <!-- Open Graph / Facebook / LinkedIn Meta Tags -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="BNN Financial Services | SAIPA Accountants & Tax Practitioners">
+  <meta property="og:description" content="Precision bookkeeping, SARS tax compliance, annual financial statements, and business advisory across East London, Komani, Gqeberha, and South Africa. Directed by Sammorah Ngqoleka & Bandile Julius Nodwele.">
+  <meta property="og:url" content="https://bnnfinancialservices.co.za/">
+  <meta property="og:site_name" content="BNN FINANCIAL SERVICES (PTY) LTD">
+  <meta property="og:image" content="https://bnnfinancialservices.co.za/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BNN Financial Services - SAIPA Accountants and Tax Practitioners">
+  <meta property="og:locale" content="en_ZA">
+
+  <!-- Business Contact Data Meta Tags -->
+  <meta property="business:contact_data:street_address" content="381 Usindiso Street Zone 2, Ezibeleni">
+  <meta property="business:contact_data:locality" content="Komani">
+  <meta property="business:contact_data:region" content="Eastern Cape">
+  <meta property="business:contact_data:postal_code" content="5320">
+  <meta property="business:contact_data:country_name" content="South Africa">
+  <meta property="business:contact_data:email" content="info@bnnfinancialservices.co.za">
+  <meta property="business:contact_data:phone_number" content="+27644145304">
+  <meta property="business:contact_data:website" content="https://bnnfinancialservices.co.za">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BNN Financial Services | SAIPA Accountants & Tax Practitioners">
+  <meta name="twitter:description" content="Precision bookkeeping, SARS tax compliance, annual financial statements, and business advisory in East London, Komani, and Gqeberha.">
+  <meta name="twitter:image" content="https://bnnfinancialservices.co.za/assets/twitter-card.jpg">
+
+  <!-- Technical Formatting Tags -->
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="theme-color" content="#072415">
+
+  <!-- External Stylesheets & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AccountingService",
+        "@id": "https://bnnfinancialservices.co.za/#organization",
+        "name": "BNN FINANCIAL SERVICES (PTY) LTD",
+        "legalName": "BNN FINANCIAL SERVICES (PTY) LTD",
+        "url": "https://bnnfinancialservices.co.za",
+        "telephone": ["+27644145304", "+27815125143"],
+        "email": "info@bnnfinancialservices.co.za",
+        "taxID": "2024/479205/07",
+        "priceRange": "R R",
+        "image": "https://bnnfinancialservices.co.za/assets/logo.png",
+        "description": "SAIPA professional members and registered tax practitioners providing precision bookkeeping, SARS tax compliance, annual financial statements, independent reviews, management accounts, and strategic business advisory.",
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "name": "SAIPA (South African Institute of Professional Accountants)"
+          }
+        ],
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "name": "Registered Office (Komani)",
+            "streetAddress": "381 Usindiso Street Zone 2, Ezibeleni",
+            "addressLocality": "Komani",
+            "addressRegion": "Eastern Cape",
+            "postalCode": "5320",
+            "addressCountry": "ZA"
+          },
+          {
+            "@type": "PostalAddress",
+            "name": "East London Office Hub",
+            "streetAddress": "Cambridge",
+            "addressLocality": "East London",
+            "addressRegion": "Eastern Cape",
+            "postalCode": "5247",
+            "addressCountry": "ZA"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "East London",
+            "sameAs": "https://en.wikipedia.org/wiki/East_London,_Eastern_Cape",
+            "containedIn": "Buffalo City Metropolitan Municipality"
+          },
+          {
+            "@type": "City",
+            "name": "Komani",
+            "alternateName": "Queenstown",
+            "sameAs": "https://en.wikipedia.org/wiki/Queenstown,_Eastern_Cape",
+            "containedIn": "Enoch Mgijima Local Municipality"
+          },
+          {
+            "@type": "City",
+            "name": "Gqeberha",
+            "alternateName": ["Port Elizabeth", "PE"],
+            "sameAs": "https://en.wikipedia.org/wiki/Gqeberha",
+            "containedIn": "Nelson Mandela Bay Metropolitan Municipality"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Eastern Cape"
+          },
+          {
+            "@type": "Country",
+            "name": "South Africa"
+          }
+        ],
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Sammorah Ngqoleka",
+            "jobTitle": "Director & Professional Accountant (SA)",
+            "email": "sammorah@bnnfinancialservices.co.za",
+            "telephone": "+27815125143"
+          },
+          {
+            "@type": "Person",
+            "name": "Bandile Julius Nodwele",
+            "jobTitle": "Director & Professional Accountant (SA)",
+            "email": "bjnodwele@bnnfinancialservices.co.za",
+            "telephone": "+27644145304"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Services Offered by BNN Financial Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Payroll Tax & Submissions",
+                "description": "PAYE & UIF Returns (EMP201), Bi-annual Reconciliations (EMP501), and IRP5/IT3(a) Certificate Generation."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Monthly Bookkeeping & VAT",
+                "description": "Bank & ledger reconciliations, accounts receivable/payable management, and VAT201 calculations and filing."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Annual Financial Statements (AFS)",
+                "description": "Balance sheets, income statements, annual CIPC return support, and year-end SARS tax submissions under IFRS for SMEs."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Independent Reviews",
+                "description": "Public interest score assessments, statutory compliance assurance, and financial credibility enhancement."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Management Accounts",
+                "description": "Cash flow analysis, variance & budget reporting, and lender & investor readiness reporting."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Business Advisory",
+                "description": "Growth & cost optimization, tax efficiency planning, and corporate governance guidance."
+              }
             }
+          ]
         }
-    </script>
-    <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind Configuration & Custom Styles -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#072415',    /* Deepest Forest Green */
+              primary: '#0F3822', /* Primary Forest Green */
+              medium: '#1B4D3E',  /* Medium Forest */
+              accent: '#22C55E',  /* Emerald Green */
+              sage: '#E8F5E9',    /* Soft Mint/Sage tint */
+              light: '#F2F9F5',   /* Light Background tint */
+              gold: '#D4AF37'     /* Accent Gold */
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          }
         }
-        .hero-pattern {
-            background-color: #072415;
-            background-image: radial-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 1px);
-            background-size: 24px 24px;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F2F9F5;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #0F3822;
-            border-radius: 4px;
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .hero-pattern {
+      background-color: #072415;
+      background-image: radial-gradient(rgba(34, 197, 94, 0.15) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F2F9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0F3822;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-accent selection:text-white">
 
@@ -287,7 +485,7 @@
             <div class="pt-10 border-t border-slate-200">
                 <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
                     <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-3.5 py-1 rounded-full">Leadership &amp; Ownership</span>
-                    <h3 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">Directors &amp; Shareholders</h3>
+                    <h3 class="text-2xl sm:text-3xl font-serif font-bold text-slate-900">Directors &amp; Proffessional Accountants (SA)</h3>
                     <p class="text-slate-600 text-sm">Meet the accredited professionals directing BNN Financial Services.</p>
                 </div>
 
@@ -301,8 +499,8 @@
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold text-slate-900">Sammorah Ngqoleka</h4>
-                                <p class="text-xs font-semibold text-emerald-700 mt-1 uppercase tracking-wider">Director &amp; Shareholder</p>
-                                <p class="text-xs text-slate-500 mt-0.5">Director &amp; Shareholder</p>
+                                <p class="text-xs font-semibold text-emerald-700 mt-1 uppercase tracking-wider">Director</p>
+                                <p class="text-xs text-slate-500 mt-0.5">Professional Accountant (SA) &amp; Tax Practitioner</p>
                             </div>
                             <div class="space-y-2 pt-2 text-sm text-slate-700">
                                 <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-primary"></i> <a href="mailto:sammorah@bnnfinancialservices.co.za" class="hover:underline font-medium text-xs break-all">sammorah@bnnfinancialservices.co.za</a></p>
@@ -325,8 +523,8 @@
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold text-slate-900">Bandile Julius Nodwele</h4>
-                                <p class="text-xs font-semibold text-emerald-700 mt-1 uppercase tracking-wider">Director &amp; Shareholder</p>
-                                <p class="text-xs text-slate-500 mt-0.5">Business &amp; Operations Executive</p>
+                                <p class="text-xs font-semibold text-emerald-700 mt-1 uppercase tracking-wider">Director</p>
+                                <p class="text-xs text-slate-500 mt-0.5">Professional Accountant (SA) &amp; Tax Practitioner</p>
                             </div>
                             <div class="space-y-2 pt-2 text-sm text-slate-700">
                                 <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-primary"></i> <a href="mailto:bjnodwele@bnnfinancialservices.co.za" class="hover:underline font-medium text-xs break-all">bjnodwele@bnnfinancialservices.co.za</a></p>
